@@ -2,8 +2,8 @@
 
 Este repositório foi criado com o objetivo de **documentar meus estudos, práticas e experimentos** na linguagem **Java**.
 
-⚠️ **Este não é um projeto final ou aplicação comercial.**  
-Trata-se de um espaço exclusivamente voltado para **aprendizado**, **testes de conceitos** e **evolução técnica**.
+> ⚠️ **Este não é um projeto final ou aplicação comercial.**  
+> Trata-se de um espaço exclusivamente voltado para **aprendizado**, **testes de conceitos** e **evolução técnica**.
 
 ---
 
@@ -125,8 +125,8 @@ Sinta-se livre para estudar, adaptar e reutilizar os códigos para aprendizado.
 ---
 
 ## ✍️ Autor
-Yago Menezes
-Estudante de Análise e Desenvolvimento de Sistemas
-Focado em aprendizado contínuo em programação
-
-“Aprender uma linguagem é escrever código, errar, entender e escrever melhor da próxima vez.”
+> Yago Menezes
+> > Estudante de Análise e Desenvolvimento de Sistemas |
+> > Focado em aprendizado contínuo em programação
+---
+> “Aprender uma linguagem é escrever código, errar, entender e escrever melhor da próxima vez.”
