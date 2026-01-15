@@ -1,9 +1,9 @@
-# 📘 Estudos em Java
+#  <img src="https://skillicons.dev/icons?i=java" /> | Estudos em Java
 
 Este repositório foi criado com o objetivo de **documentar meus estudos, práticas e experimentos** na linguagem **Java**.
 
 > ⚠️ **Este não é um projeto final ou aplicação comercial.**  
-> Trata-se de um espaço exclusivamente voltado para **aprendizado**, **testes de conceitos** e **evolução técnica**.
+> > Trata-se de um espaço exclusivamente voltado para **aprendizado**, **testes de conceitos** e **evolução técnica**.
 
 ---
 
