@@ -48,6 +48,8 @@ A estrutura do repositório será organizada de forma didática, podendo evoluir
  ┃ ┗ ┣ 📂 tenmenezes
  ┃   ┗ ┣ 📂 fundamentos
  ┃     ┣ 📂 poo
+ ┃     ┣ 📂 javaintermediario
+ ┃     ┗ 📂 estruturadedados
  ┣ 📜 .gitignore
  ┗ 📜 README.md
 
