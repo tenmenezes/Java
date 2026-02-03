@@ -1,4 +1,4 @@
-package com.tenmenezes.fundamentos;
+package com.tenmenezes.poo;
 
 import java.util.Random;
 
