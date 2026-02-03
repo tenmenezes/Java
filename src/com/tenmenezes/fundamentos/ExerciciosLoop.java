@@ -3,7 +3,8 @@ package com.tenmenezes.fundamentos;
 import java.util.Scanner;
 
 public class ExerciciosLoop {
-    public static void main(String[] args) {
+
+    static void main(String[] args) {
 
         /*
          * 1)
