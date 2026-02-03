@@ -37,15 +37,16 @@ Os conteúdos presentes neste repositório incluem, mas não se limitam a:
 A estrutura do repositório será organizada de forma didática, podendo evoluir ao longo do tempo:
 
 ```bash
-📦 estudos-Java
- ┣ 📂 fundamentos
- ┣ 📂 estruturas-de-dados
- ┣ 📂 funcoes
- ┣ 📂 poo
- ┣ 📂 exercicios
- ┣ 📂 testes
- ┣ 📂 anotações
+📦 Java
+ ┣ 📂 .idea
+ ┣ 📂 src
+ ┃ ┣ 📂 com
+ ┃ ┗ ┣ 📂 tenmenezes
+ ┃   ┗ ┣ 📂 fundamentos
+ ┃     ┗ 📂 estruturasdedados
+ ┣ 📜 .gitignore
  ┗ 📜 README.md
+
 ```
 A organização pode mudar conforme novos conteúdos forem estudados.
 
