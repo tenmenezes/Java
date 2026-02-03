@@ -1,4 +1,8 @@
-#  <img src="https://skillicons.dev/icons?i=java" width="400px" align="center" />
+<p align="center">
+ <img src="https://skillicons.dev/icons?i=java" width="200px" />
+</p>
+
+---
 
 Este repositório foi criado com o objetivo de **documentar meus estudos, práticas e experimentos** na linguagem **Java**.
 
