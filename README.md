@@ -1,4 +1,4 @@
-#  <img src="https://skillicons.dev/icons?i=java" /> | Estudos em Java
+#  <img src="https://skillicons.dev/icons?i=java" width="400px" align="center" />
 
 Este repositório foi criado com o objetivo de **documentar meus estudos, práticas e experimentos** na linguagem **Java**.
 
@@ -43,7 +43,7 @@ A estrutura do repositório será organizada de forma didática, podendo evoluir
  ┃ ┣ 📂 com
  ┃ ┗ ┣ 📂 tenmenezes
  ┃   ┗ ┣ 📂 fundamentos
- ┃     ┗ 📂 estruturasdedados
+ ┃     ┣ 📂 poo
  ┣ 📜 .gitignore
  ┗ 📜 README.md
 
