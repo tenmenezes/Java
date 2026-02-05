@@ -1,5 +1,6 @@
 package com.tenmenezes.poo;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Exercicios_Classes_Metodos {
@@ -29,15 +30,28 @@ public class Exercicios_Classes_Metodos {
          *
          */
 
-//        Lampada lampada = new Lampada();
+//         Lampada lampada = new Lampada();
 //
-//        lampada.ligarLampada();
-//        lampada.estadoAtualDaLampada();
+//         System.out.println("Estado inicial: ");
+//         lampada.estadoAtualDaLampada();
 //
-//        System.out.println();
+//         System.out.println();
 //
-//        lampada.desligarLampada();
-//        lampada.estadoAtualDaLampada();
+//         System.out.println("Estado inicial com sobrecarga: ");
+//         Lampada lampada_2 = new Lampada(true);
+//         lampada_2.estadoAtualDaLampada();
+//
+//         System.out.println();
+//
+//         System.out.println("Estado após função de ligar: ");
+//         lampada.ligar();
+//         lampada.estadoAtualDaLampada();
+//
+//         System.out.println();
+//
+//         System.out.println("Estado após função de desligar: ");
+//         lampada.desligar();
+//         lampada.estadoAtualDaLampada();
 
         /*
          * 2)
@@ -68,30 +82,31 @@ public class Exercicios_Classes_Metodos {
 //        Scanner scan = new Scanner(System.in);
 //        Random rand = new Random();
 //
-//        ContaCorrente cc = new ContaCorrente();
-//
 //        System.out.println("Sistema Bancário");
 //
 //        int numDaConta = rand.nextInt(1000);
 //        int resp;
-//        boolean contaEspecial;
-//        double saldoDaConta, limiteDaConta;
+//        boolean contaEspecial = false;
+//        double saldoDaConta;
+//        double limiteDaConta;
 //        String opc;
+//
 //        System.out.print("\nDigito saldo inicial que sua conta terá: ");
 //        saldoDaConta = scan.nextDouble();
+//
+////      instanciando objeto para que os valores sejam armazenados e vistos por todo codigo
+//        ContaCorrente conta = null;
 //
 //        do {
 //            System.out.print("Quer configurar sua conta como especial? (S/N): ");
 //            opc = scan.next();
 //
 //            if (opc.equals("S")) {
+//                contaEspecial = true;
 //                System.out.print("Digite o limite da sua conta: ");
 //                limiteDaConta = scan.nextDouble();
 //
-//                cc.limiteDaConta = limiteDaConta;
-//                cc.contaEspecial = true;
-//                cc.numConta = numDaConta;
-//                cc.saldoDaConta = saldoDaConta;
+//                conta = new ContaCorrente(numDaConta, saldoDaConta, contaEspecial, limiteDaConta);
 //
 //                System.out.println("\nConta criada com sucesso! \n");
 //
@@ -99,9 +114,8 @@ public class Exercicios_Classes_Metodos {
 //
 //                break;
 //            } else if (opc.equals("N")) {
-//                cc.contaEspecial = false;
-//                cc.numConta = numDaConta;
-//                cc.saldoDaConta = saldoDaConta;
+//
+//                conta = new ContaCorrente(numDaConta, saldoDaConta, contaEspecial);
 //
 //                System.out.println("\nConta criada com sucesso! \n");
 //
@@ -127,37 +141,36 @@ public class Exercicios_Classes_Metodos {
 //            System.out.print("R: ");
 //            resp = scan.nextInt();
 //
-//
 //            if (resp == 1) {
 //
 //                System.out.print("Digite a quantidade que deseja depositar: ");
 //                double deposito = scan.nextDouble();
 //
-//                cc.depositarDinheiro(deposito);
+//                conta.depositarDinheiro(deposito);
 //
-//                System.out.println("Seu saldo atualizado: " + String.format("%.2f", saldoDaConta));
+//                System.out.println(STR."Seu saldo atualizado: \{String.format("%.2f", conta.getSaldoDaConta())}");
 //
 //            } else if (resp == 2) {
 //
 //                System.out.print("Digite a quantidade que deseja sacar: ");
 //                double saque = scan.nextDouble();
 //
-//                cc.sacarDinheiro(saque);
+//                conta.sacarDinheiro(saque);
 //
-//                System.out.println("Seu saldo atualizado: " + String.format("%.2f", saldoDaConta));
+//                System.out.println(STR."Seu saldo atualizado: \{String.format("%.2f", conta.getSaldoDaConta())}");
 //
 //            } else if (resp == 3) {
 //
-//                if (!cc.contaEspecial) {
-//                    System.out.println("Seu saldo atual: R$ " + String.format("%.2f", cc.verificaSaldoAtual()));
+//                if (!conta.isContaEspecial()) {
+//                    System.out.println(STR."Seu saldo atual: R$ \{String.format("%.2f", conta.verificaSaldoAtual())}");
 //                } else {
-//                    System.out.println("Seu saldo atual: R$ " + String.format("%.2f", cc.verificaSaldoAtual()));
-//                    System.out.println("Limite: R$ " + String.format("%.2f", cc.limiteDaConta));
+//                    System.out.println(STR."Seu saldo atual: R$ \{String.format("%.2f", conta.verificaSaldoAtual())}");
+//                    System.out.println(STR."Limite: R$ \{String.format("%.2f", conta.getLimiteDaConta())}");
 //                }
 //
 //            } else if (resp == 4) {
 //
-//                cc.usandoLimiteDaConta();
+//                conta.usandoLimiteDaConta();
 //
 //            } else if (resp == 5) {
 //
@@ -192,47 +205,41 @@ public class Exercicios_Classes_Metodos {
          *
          */
 
-//        Scanner scan = new Scanner(System.in);
-//        Random rand = new Random();
+//         Scanner scan = new Scanner(System.in);
+//         Aluno aluno = new Aluno();
 //
-//        Aluno aluno = new Aluno();
+//         String nome, curso;
+//         String[] disciplinas = new String[3];
+//         double[] notasDasDisciplinas = new double[3];
 //
-//        String nome, curso;
-//        int matricula;
-//        String[] disciplinas = new String[3];
-//        double[] notasDasDisciplinas = new double[3];
+//         System.out.print("Digite seu nome: ");
+//         nome = scan.nextLine();
 //
-//        System.out.print("Digite seu nome: ");
-//        nome = scan.nextLine();
+//         System.out.print("Digite seu curso: ");
+//         curso = scan.nextLine();
 //
-//        System.out.print("Digite seu curso: ");
-//        curso = scan.nextLine();
+//         for (int i = 0; i < disciplinas.length; i++) {
+//             System.out.print(STR."Digite o nome da disciplina \{i + 1}: ");
+//             disciplinas[i] = scan.nextLine();
 //
-//        for (int i = 0; i < disciplinas.length; i++) {
-//            System.out.print("Digite o nome da disciplina " + (i + 1) + ": ");
-//            disciplinas[i] = scan.nextLine();
+//             aluno.setNomeDasDisciplinas(disciplinas[i], i);
+//         }
 //
-//            aluno.nomeDasDisciplinas[i] = disciplinas[i];
-//        }
+//         aluno.gerandoNotas();
 //
-//        matricula = rand.nextInt(1000);
+//         aluno.setNomeAluno(nome);
+//         aluno.setCurso(curso);
 //
-//        aluno.gerandoNotas(notasDasDisciplinas);
+//         System.out.println(STR."\nNome do aluno: \{aluno.getNomeAluno()}");
+//         System.out.println(STR."Matrícula....: \{aluno.getMatricula()}");
+//         System.out.println(STR."Curso........: \{aluno.getCurso()}");
 //
-//        aluno.nomeAluno = nome;
-//        aluno.curso = curso;
-//
-//        System.out.println("\nNome do aluno: " + nome);
-//        System.out.println("Matrícula....: " + matricula);
-//        System.out.println("Curso........: " + curso);
-//
-//        System.out.println("\nDisciplinas: ");
-//        for (int j = 0; j < 3; j++) {
-//
-//            System.out.println(disciplinas[j] + ": " + String.format("%.2f", notasDasDisciplinas[j])
-//                    + " - " + aluno.resultadoDasNotas(j, notasDasDisciplinas));
-//
-//        }
+//         System.out.println("\nDisciplinas: ");
+//         for (int j = 0; j < 3; j++) {
+//             System.out.println(STR."\{aluno.getNomeDasDisciplinas(j)}: "
+//                     + STR."\{String.format("%.2f", aluno.getNotasDasDisciplinas(j))} "
+//                     + STR."- \{aluno.resultadoDasNotas(j)}");
+//         }
 
         /*
          * 4)
@@ -329,18 +336,19 @@ public class Exercicios_Classes_Metodos {
 
         Scanner scan = new Scanner(System.in);
 
-        JogoDaVelha jdv = new JogoDaVelha();
+        JogoDaVelha jdv = null;
 
-        System.out.println(" >  JOGO DA VELHA < \n");
+        System.out.println(" >  JOGO DA VELHA  < \n");
         System.out.print("Escolha com qual deseja jogar (X / O): ");
         String escolhaDoJogador = scan.next();
 
         if (escolhaDoJogador.equals("X") || escolhaDoJogador.equals("O")) {
-            jdv.inicializarJogo(escolhaDoJogador);
+            jdv = new JogoDaVelha(escolhaDoJogador);
+            jdv.inicializarJogo(jdv.getVezDoJogador());
             System.out.println("\nJogo inicializado\n");
-            while(!jdv.verificarVencedor()) {
+            while(!jdv.respostaDoVencedor()) {
                 jdv.exibirTabuleiro();
-                System.out.println("\nJogador " + jdv.vezDoJogador + ": ");
+                System.out.println(STR."\nJogador \{jdv.getVezDoJogador()}: ");
                 System.out.print("Digite a posição da linha: ");
                 int linha = scan.nextInt();
                 System.out.print("Digite a posição da coluna: ");
@@ -349,18 +357,16 @@ public class Exercicios_Classes_Metodos {
                 if (!jdv.realizarJogada(linha, coluna)) {
                     System.out.println("Erro: Jogada inválida.\n");
                     continue;
-                } else {
-                    jdv.realizarJogada(linha, coluna);
                 }
-                if (jdv.verificarVencedor()) {
-                    System.out.println("\nJogador " + jdv.vezDoJogador + " é o vencedor! Obrigado por jogar!");
+                if (jdv.respostaDoVencedor()) {
+                    String vencedor = jdv.getVezDoJogador().equals("X") ? "O" : "X";
+                    System.out.println(STR."\nJogador \{vencedor} é o vencedor! \uD83C\uDFC6");
                     break;
                 }
-                if (jdv.verificarEmpate()) {
+                if (jdv.respostaDoEmpate()) {
                     System.out.println("\nDeu velha! Obrigado por jogar!");
                     break;
                 }
-                jdv.vezDoJogador = jdv.vezDoJogador.equals("X") ? "O" : "X";
             }
         } else {
             System.out.println("Escolha inválida.");

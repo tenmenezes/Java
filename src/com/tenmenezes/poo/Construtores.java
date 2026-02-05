@@ -34,17 +34,45 @@ public class Construtores {
 
 //  Sobrecarga de Construtores (Tendo várias formas)
     public class Produto {
-        String nome;
-        double preco;
-        double desconto;
+        private String nome;
+        private double preco;
+        private double desconto;
 
-        // Opção 1: Nome e Preço
+        Produto() { }
+
+//      Getter - Deixa visivel para outras classes os valores desses atributos
+        public String getNome() {
+            return nome;
+        }
+
+        public double getPreco() {
+            return preco;
+        }
+
+        public double getDesconto() {
+            return desconto;
+        }
+
+//      Setter - Possivel alterar e implementar valores a esses atributos
+        public void setNome(String nome) {
+            this.nome = nome;
+        }
+
+        public void setPreco(double preco) {
+            this.preco = preco;
+        }
+
+        public void setDesconto(double desconto) {
+            this.desconto = desconto;
+        }
+
+        // Opção 1: Nome e Preço - metodo de sobrecarga de construtor
         public Produto(String nome, double preco) {
             this.nome = nome;
             this.preco = preco;
         }
 
-        // Opção 2: Nome, Preço e um Desconto especial
+        // Opção 2: Nome, Preço e um Desconto especial - metodo de sobrecarga de construtor
         public Produto(String nome, double preco, double desconto) {
             this.nome = nome;
             this.preco = preco;

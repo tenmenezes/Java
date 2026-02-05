@@ -2,29 +2,54 @@ package com.tenmenezes.poo;
 
 public class JogoDaVelha {
 
-    String[][] tabuleiro = new String[3][3];
-    String vezDoJogador;
+    private String[][] tabuleiro = new String[3][3];
+    private String vezDoJogador;
 
-    void inicializarJogo(String caracterDoJogdor) {
+    public JogoDaVelha() {
+        tabuleiro = new String[3][3];
+        vezDoJogador = null;
+    }
+
+    public JogoDaVelha(String vezDoJogador) {
+        this.vezDoJogador = vezDoJogador;
+    }
+
+    public String getTabuleiro(int linha, int coluna) {
+        return tabuleiro[linha][coluna];
+    }
+
+    public String getVezDoJogador() {
+        return vezDoJogador;
+    }
+
+    public void setTabuleiro(int linha, int coluna, String jogada) {
+        this.tabuleiro[linha][coluna] = jogada;
+    }
+
+    public void setVezDoJogador(String vezDoJogador) {
+        this.vezDoJogador = vezDoJogador;
+    }
+
+    void inicializarJogo(String jogada) {
 
         for (int i = 0; i < tabuleiro.length; i++) {
             for (int j = 0; j < tabuleiro[i].length; j++) {
-                tabuleiro[i][j] = "-";
+                setTabuleiro(i, j, "-");
             }
         }
-        vezDoJogador = caracterDoJogdor;
+        setVezDoJogador(jogada);
     }
 
     void exibirTabuleiro() {
         System.out.print("   ");
         for (int h = 0; h < tabuleiro.length; h++) {
-            System.out.print("[" + h + "]");
+            System.out.print(STR."[\{h}]");
         }
         System.out.println();
         for (int i = 0; i < tabuleiro.length; i++) {
-            System.out.print("[" + i + "]" + " ");
+            System.out.print(STR."[\{i}] ");
             for (int j = 0; j < tabuleiro[i].length; j++) {
-                System.out.print(tabuleiro[i][j] + "  ");
+                System.out.print(STR."\{getTabuleiro(i, j)}  ");
             }
             System.out.println();
         }
@@ -33,7 +58,8 @@ public class JogoDaVelha {
     boolean realizarJogada(int linha, int coluna) {
         if ((linha >= 0 && linha <= 2) && (coluna >= 0 && coluna <= 2)) {
             if (tabuleiro[linha][coluna].equals("-")) {
-                tabuleiro[linha][coluna] = vezDoJogador;
+                setTabuleiro(linha, coluna, getVezDoJogador());
+                setVezDoJogador(getVezDoJogador().equals("X") ? "O" : "X");
                 return true;
             } else {
                 return false;
@@ -43,7 +69,7 @@ public class JogoDaVelha {
         }
     }
 
-    boolean verificarVencedor() {
+    private boolean verificaVencedor() {
         for (int i = 0; i < tabuleiro.length; i++) {
 //             verificação de vencedor por linha
             if (!tabuleiro[i][0].equals("-") &&
@@ -74,8 +100,12 @@ public class JogoDaVelha {
         return false;
     }
 
-    boolean verificarEmpate() {
-        if (verificarVencedor()) {
+    boolean respostaDoVencedor() {
+        return verificaVencedor();
+    }
+
+    private boolean verificaEmpate() {
+        if (respostaDoVencedor()) {
             return false;
         }
         for (int i = 0; i < tabuleiro.length; i++) {
@@ -86,5 +116,9 @@ public class JogoDaVelha {
             }
         }
         return true;
+    }
+
+    boolean respostaDoEmpate() {
+        return verificaEmpate();
     }
 }
