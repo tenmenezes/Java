@@ -3,9 +3,194 @@ package com.tenmenezes.poo;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercicios_Classes_Metodos {
+static class Contato {
 
-     static void main(String[] args) {
+    String nome, email, telefone;
+
+    public Contato(String nome, String telefone, String email) {
+    }
+
+    void exibirDadosDoContato() {
+
+        System.out.println(STR."Nome..............: \{nome}");
+        System.out.println(STR."E-mail............: \{email}");
+        System.out.println(STR."Número de Telefone: \{telefone}");
+
+    }
+
+    void atualizarTelefone(String novoTelefone) {
+
+        telefone = novoTelefone;
+
+    }
+
+}
+ static class ContaCorrente {
+
+    private int numConta;
+    private double saldoDaConta;
+    private boolean contaEspecial;
+    private double limiteDaConta;
+
+
+    //  definindo valores iniciais
+    public ContaCorrente() {
+        this.numConta = 0;
+        this.saldoDaConta = 0;
+        this.contaEspecial = false;
+        this.limiteDaConta = 0;
+    }
+
+    public ContaCorrente(int numConta, double saldoDaConta, boolean contaEspecial, double limiteDaConta) {
+        this.numConta = numConta;
+        this.saldoDaConta = saldoDaConta;
+        this.contaEspecial = contaEspecial;
+        this.limiteDaConta = limiteDaConta;
+    }
+
+    //  sobrecarga de construtor pra receber conta não especial (sem a possibilidade de utilizar limite)
+    public ContaCorrente(int numConta, double saldoDaConta, boolean contaEspecial) {
+        this.numConta = numConta;
+        this.saldoDaConta = saldoDaConta;
+        this.contaEspecial = contaEspecial;
+    }
+
+    public int getNumConta() {
+        return numConta;
+    }
+
+    public double getSaldoDaConta() {
+        return saldoDaConta;
+    }
+
+    public boolean isContaEspecial() {
+        return contaEspecial;
+    }
+
+    public double getLimiteDaConta() {
+        return limiteDaConta;
+    }
+
+    public void setSaldoDaConta(double saldoDaConta) {
+        this.saldoDaConta = saldoDaConta;
+    }
+
+    public void depositarDinheiro(double valorRecebido) {
+        System.out.println(STR."\nR$ \{String.format("%.2f", valorRecebido)} depositado com sucesso!\n");
+
+        saldoDaConta += valorRecebido;
+
+        setSaldoDaConta(saldoDaConta);
+    }
+
+    public void sacarDinheiro(double valorDoSaque) {
+
+        double valorMaximoDisponivel = isContaEspecial()
+                ? getSaldoDaConta() + getLimiteDaConta()
+                : getSaldoDaConta();
+
+        boolean podeSacar = valorDoSaque <= valorMaximoDisponivel;
+
+        if (podeSacar) {
+            System.out.println("\nSaque realizado com sucesso!\n");
+
+            saldoDaConta -= valorDoSaque;
+
+            setSaldoDaConta(saldoDaConta);
+        } else {
+            System.out.println("Erro: Saque negado.");
+        }
+    }
+
+    public double verificaSaldoAtual() {
+        return getSaldoDaConta();
+    }
+
+    public void usandoLimiteDaConta() {
+        if (isContaEspecial() && getSaldoDaConta() < 0) {
+            System.out.println("\nVocê atualmente está usando seu limite da conta.\n");
+        } else if (isContaEspecial() && getSaldoDaConta() >= 0) {
+            System.out.println("\nVocê não está usando seu limite da conta.\n");
+        } else {
+            System.out.println("\nVocê não pode verificar isto pois sua conta não é especial.\n");
+        }
+    }
+}
+
+static class Aluno {
+    private int matricula;
+    private String nomeAluno, curso;
+    private String[] nomeDasDisciplinas = new String[3];
+    private double[] notasDasDisciplinas = new double[3];
+
+    Random rand = new Random();
+
+    public Aluno() {
+        matricula = rand.nextInt(1000);
+        nomeAluno = null;
+        curso = null;
+        nomeDasDisciplinas = new String[3];
+        notasDasDisciplinas = new double[3];
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public String getNomeAluno() {
+        return nomeAluno;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public String getNomeDasDisciplinas(int indice) {
+        return nomeDasDisciplinas[indice];
+    }
+
+    public double getNotasDasDisciplinas(int indice) {
+        return notasDasDisciplinas[indice];
+    }
+
+
+    public void setNomeAluno(String nomeAluno) {
+        this.nomeAluno = nomeAluno;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public void setNomeDasDisciplinas(String nome, int indice) {
+        this.nomeDasDisciplinas[indice] = nome;
+    }
+
+    public void setNotasDasDisciplinas(double notas, int indice) {
+        this.notasDasDisciplinas[indice] = notas;
+    }
+
+    public void gerandoNotas() {
+
+        Random rand = new Random();
+
+        for (int i = 0; i < notasDasDisciplinas.length; i++) {
+            setNotasDasDisciplinas(rand.nextDouble() * 10, i);
+        }
+    }
+
+    public String resultadoDasNotas(int indice) {
+
+        if (notasDasDisciplinas[indice] >= 7) {
+            return "Aluno aprovado.";
+        } else {
+            return "Aluno reprovado.";
+        }
+    }
+}
+
+public class Exercicios_Classes_Metodos {
+    static void main(String[] args) {
 
         /*
          * 1)
@@ -346,7 +531,7 @@ public class Exercicios_Classes_Metodos {
             jdv = new JogoDaVelha(escolhaDoJogador);
             jdv.inicializarJogo(jdv.getVezDoJogador());
             System.out.println("\nJogo inicializado\n");
-            while(!jdv.respostaDoVencedor()) {
+            while (!jdv.respostaDoVencedor()) {
                 jdv.exibirTabuleiro();
                 System.out.println(STR."\nJogador \{jdv.getVezDoJogador()}: ");
                 System.out.print("Digite a posição da linha: ");
