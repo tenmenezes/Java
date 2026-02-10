@@ -1,4 +1,4 @@
-package com.tenmenezes.poo;
+package com.tenmenezes.poo.exerciciosclassesmetodos;
 
 public class JogoDaVelha {
 

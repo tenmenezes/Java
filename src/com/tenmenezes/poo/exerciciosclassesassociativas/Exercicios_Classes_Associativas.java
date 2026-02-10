@@ -1,4 +1,4 @@
-package com.tenmenezes.poo;
+package com.tenmenezes.poo.exerciciosclassesassociativas;
 
 import java.util.ArrayList;
 import java.util.Scanner;

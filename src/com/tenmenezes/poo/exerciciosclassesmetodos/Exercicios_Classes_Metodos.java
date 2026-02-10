@@ -1,9 +1,9 @@
-package com.tenmenezes.poo;
+package com.tenmenezes.poo.exerciciosclassesmetodos;
 
 import java.util.Random;
 import java.util.Scanner;
 
-static class Contato {
+class Contato {
 
     String nome, email, telefone;
 
@@ -25,7 +25,7 @@ static class Contato {
     }
 
 }
- static class ContaCorrente {
+ class ContaCorrente {
 
     private int numConta;
     private double saldoDaConta;
@@ -117,7 +117,7 @@ static class Contato {
     }
 }
 
-static class Aluno {
+ class Aluno {
     private int matricula;
     private String nomeAluno, curso;
     private String[] nomeDasDisciplinas = new String[3];

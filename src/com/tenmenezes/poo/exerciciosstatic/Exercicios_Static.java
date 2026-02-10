@@ -1,4 +1,4 @@
-package com.tenmenezes.poo;
+package com.tenmenezes.poo.exerciciosstatic;
 
 class Contador {
 

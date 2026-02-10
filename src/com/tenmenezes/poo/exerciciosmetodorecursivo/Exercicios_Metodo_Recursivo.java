@@ -1,4 +1,4 @@
-package com.tenmenezes.poo;
+package com.tenmenezes.poo.exerciciosmetodorecursivo;
 
 public class Exercicios_Metodo_Recursivo {
         /*
