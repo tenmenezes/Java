@@ -1,9 +1,9 @@
-package com.tenmenezes.poo;
+package com.tenmenezes.poo.construtores;
 
 public class Construtores {
 
-// Contructor padrão (Sem argumentos)
-   public class Carro {
+    // Contructor padrão (Sem argumentos)
+    public class Carro {
         String modelo;
 
         public Carro() {
@@ -16,31 +16,32 @@ public class Construtores {
     //  Uso:
     Carro c1 = new Carro();
 
-//  Construtor com parâmetros (mais comum)
+    //  Construtor com parâmetros (mais comum)
     public class Aluno {
-       String nome;
-       int matricula;
+        String nome;
+        int matricula;
 
-       public Aluno (String nome, int matricula) {
-           this.nome = nome;
-           this.matricula = matricula;
-       }
+        public Aluno(String nome, int matricula) {
+            this.nome = nome;
+            this.matricula = matricula;
+        }
 
     }
 
-//  Uso:
+    //  Uso:
 //  Aluno a1 = new Aluno(); -> Daria erro, agora é obrigatório passar os dados
     Aluno a1 = new Aluno("Menezes", 12345);
 
-//  Sobrecarga de Construtores (Tendo várias formas)
+    //  Sobrecarga de Construtores (Tendo várias formas)
     public class Produto {
         private String nome;
         private double preco;
         private double desconto;
 
-        Produto() { }
+        Produto() {
+        }
 
-//      Getter - Deixa visivel para outras classes os valores desses atributos
+        //      Getter - Deixa visivel para outras classes os valores desses atributos
         public String getNome() {
             return nome;
         }
@@ -53,7 +54,7 @@ public class Construtores {
             return desconto;
         }
 
-//      Setter - Possivel alterar e implementar valores a esses atributos
+        //      Setter - Possivel alterar e implementar valores a esses atributos
         public void setNome(String nome) {
             this.nome = nome;
         }
@@ -80,7 +81,7 @@ public class Construtores {
         }
     }
 
-//  O uso do this() para encadeamento
+    //  O uso do this() para encadeamento
     public class Smartphone {
         String marca;
         int ram;
