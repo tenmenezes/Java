@@ -1,4 +1,4 @@
-package com.tenmenezes.poo.heranca.exerciciosherancaepolimorfismo;
+package com.tenmenezes.poo.heranca.exercicios;
 
 public class ContaEspecial extends ContaBancaria {
 
