@@ -1,4 +1,4 @@
-package com.tenmenezes.poo.exerciciosherancaepolimorfismo;
+package com.tenmenezes.poo.heranca.exerciciosherancaepolimorfismo;
 
 public abstract class Pessoa {
 
