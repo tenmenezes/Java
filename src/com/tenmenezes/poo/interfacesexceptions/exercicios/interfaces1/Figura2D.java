@@ -1,3 +1,3 @@
-package com.tenmenezes.poo.interfacesexceptions.exercicios;
+package com.tenmenezes.poo.interfacesexceptions.exercicios.interfaces1;
 
 public abstract class Figura2D extends FiguraGeometrica implements DimensaoSuperficial { }

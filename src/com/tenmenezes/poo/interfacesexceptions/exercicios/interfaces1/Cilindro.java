@@ -1,4 +1,4 @@
-package com.tenmenezes.poo.interfacesexceptions.exercicios;
+package com.tenmenezes.poo.interfacesexceptions.exercicios.interfaces1;
 
 public class Cilindro extends Figura3D {
 

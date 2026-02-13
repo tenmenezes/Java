@@ -1,6 +1,6 @@
-package com.tenmenezes.poo.interfacesexceptions.exercicios;
+package com.tenmenezes.poo.interfacesexceptions.exercicios.interfaces1;
 
-public class Exercicios_Interfaces {
+public class Interfaces {
     static void main(String[] args) {
 
         Quadrado fig_1 = new Quadrado();
