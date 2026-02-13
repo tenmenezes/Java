@@ -34,6 +34,6 @@ public class Contato {
 
     @Override
     public String toString() {
-        return STR."Contato \{id}:\n ID: \{id}\n Nome: \{nome}\n Telefone: \{telefone}";
+        return STR."Contato:\n ID: \{id}\n Nome: \{nome}\n Telefone: \{telefone}";
     }
 }
