@@ -8,7 +8,7 @@ public class ClasseResourceBundle {
     public static void main(String[] args) {
 
         System.out.println(STR."Locale atual \{Locale.getDefault()}");
-        ResourceBundle rb = ResourceBundle.getBundle("meu-texto");
+        ResourceBundle rb = ResourceBundle.getBundle("meu-texto", new Locale("en", "US"));
 
         System.out.println(STR."Hello EN: \{rb.getString("hello")}");
         System.out.println(STR."World EN: \{rb.getString("world")}");
