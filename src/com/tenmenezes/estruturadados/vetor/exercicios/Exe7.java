@@ -30,13 +30,13 @@ public class Exe7 extends Exe6 {
                     adicionarContatoFinal(scan, lista);
                     break;
                 case 2:
-                    adicionarContatoPosicao(scan, lista);
+                    adicionarPosicaoDoContato(scan, lista);
                     break;
                 case 3:
-                    obtemContatoPosicao(scan, lista);
+                    obterPosicaoDoContato(scan, lista);
                     break;
                 case 4:
-                    obtemContato(scan, lista);
+                    obterContato(scan, lista);
                     break;
                 case 5:
                     pesquisarUltimoIndice(scan, lista);
@@ -51,7 +51,7 @@ public class Exe7 extends Exe6 {
                     excluirContato(scan, lista);
                     break;
                 case 9:
-                    imprimeTamanhoVetor(lista);
+                    imprimirTamanhoDoVetor(lista);
                     break;
                 case 10:
                     limparVetor(lista);
@@ -79,7 +79,7 @@ public class Exe7 extends Exe6 {
         System.out.println("Todos os contatos do vetor foram excluídos");
     }
 
-    private static void imprimeTamanhoVetor(ArrayList<Contato> lista) {
+    private static void imprimirTamanhoDoVetor(ArrayList<Contato> lista) {
 
         System.out.println(STR."Tamanho do vetor é de: \{lista.size()}");
     }
@@ -159,7 +159,7 @@ public class Exe7 extends Exe6 {
         }
     }
 
-    private static void obtemContato(Scanner scan, ArrayList<Contato> lista) {
+    private static void obterContato(Scanner scan, ArrayList<Contato> lista) {
 
         int pos = leInformacaoInt("Entre com a posição a ser pesquisada", scan);
 
@@ -180,7 +180,7 @@ public class Exe7 extends Exe6 {
         }
     }
 
-    private static void obtemContatoPosicao(Scanner scan, ArrayList<Contato> lista) {
+    private static void obterPosicaoDoContato(Scanner scan, ArrayList<Contato> lista) {
 
         int pos = leInformacaoInt("Entre com a posição a ser pesquisada", scan);
 
@@ -211,7 +211,7 @@ public class Exe7 extends Exe6 {
         System.out.println(contato);
     }
 
-    private static void adicionarContatoPosicao(Scanner scan, ArrayList<Contato> lista) {
+    private static void adicionarPosicaoDoContato(Scanner scan, ArrayList<Contato> lista) {
 
         System.out.println("Criando um contato, entre com as informações:");
         String nome = leInformacao("Entre com o nome", scan);
