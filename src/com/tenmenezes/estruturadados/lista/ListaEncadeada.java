@@ -11,8 +11,8 @@ public class ListaEncadeada<T> {
 
     // CONSTANTES
     private final int NAO_ENCONTRADO = -1;
-    private final String NAO_EXISTE = "Posição não existe.";
-    private final String LISTA_VAZIA = "Lista está vazia.";
+    private final String NAO_EXISTE = "Erro: Posição não existe.";
+    private final String LISTA_VAZIA = "Erro: Lista está vazia.";
     private static final int MENOR = -1;
     private static final int IGUAL_MAIOR = 0;
 
