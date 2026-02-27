@@ -76,18 +76,18 @@ public class EstruturaEstatica<T> {
     public String toString() {
 
         StringBuilder s = new StringBuilder();
-        s.append("[\n");
+        s.append("[");
 
         for (int i = 0; i < this.tamanho - 1; i++) {
             s.append(this.elementos[i]);
-            s.append(", \n");
+            s.append(", ");
         }
 
         if (this.tamanho > 0) {
             s.append(this.elementos[this.tamanho - 1]);
         }
 
-        s.append("\n]");
+        s.append("]");
 
         return s.toString();
     }
