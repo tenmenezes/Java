@@ -1,5 +1,5 @@
-<p align="center">
- <img src="https://skillicons.dev/icons?i=java" width="200px" />
+<p>
+ <img src="https://skillicons.dev/icons?i=java" width="100px" />
 </p>
 
 ---
